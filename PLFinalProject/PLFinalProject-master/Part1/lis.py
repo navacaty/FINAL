@@ -91,7 +91,7 @@ class Env(dict):
 global_env = standard_env()
 
 ################ Interaction: A REPL
-
+'''
 def repl(prompt='lis.py> '):
     "A prompt-read-eval-print loop."
     while True:
@@ -105,16 +105,16 @@ def lispstr(exp):
         return '(' + ' '.join(map(lispstr, exp)) + ')' 
     else:
         return str(exp)
-
+'''
 ################ Procedures
-
+'''
 class Procedure(object):
     "A user-defined Scheme procedure."
     def __init__(self, parms, body, env):
         self.parms, self.body, self.env = parms, body, env
     def __call__(self, *args): 
         return eval(self.body, Env(self.parms, args, self.env))
-
+'''
 ################ eval
 
 toReturn = None
