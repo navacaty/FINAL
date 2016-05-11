@@ -11,7 +11,7 @@ name = {}
 
 global ast
 ast = []
-
+'''
 def cons(l):
     return [l[0]] + l[1]
 
@@ -65,11 +65,11 @@ def add(l):
 name['+'] = add
 
 def minus(l):
-    '''Unary minus'''
+    #Unary minus
     return -l[0]
 
 name['-'] = minus
-
+'''
 def _print(l):
     print lisp_str(l[0])
 
