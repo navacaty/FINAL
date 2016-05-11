@@ -44,3 +44,6 @@ print "\nselect user_id and yearly wages: "
 for employee in { d[3] for d in s_emp[1::] }:
     print (lambda user_Id, avgSal: (user_Id, avgSal*12))(employee, (lambda l: round(sum(l) / len(l), 2))(map(float,[ e[7] for e in s_emp[1::] if e[3] == employee ])))
 
+print "\nselect TITLE and avg_monthly_wage: "
+for employee in { d[6] for d in s_emp[1::] }:
+    print (lambda TITLE, avg_monthly_wage: (TITLE, avg_monthly_wage))(employee, (lambda l: round(sum(l) / len(l), 2))(map(float,[ e[7] for e in s_emp[1::] if e[6] == employee ])))
